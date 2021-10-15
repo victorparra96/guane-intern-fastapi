@@ -1,0 +1,14 @@
+aerich
+asyncpg
+fastapi
+tortoise-orm
+uvicorn
+requests
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+redis>=3.5
+celery==4.4.7
+pytest
+httpx==0.19.0
+flake8
