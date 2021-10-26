@@ -8,6 +8,8 @@ WORKDIR /usr/src/app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
+ENV PYTHONPATH="$PYTHONPATH:/usr/src/app"
+
 # install system dependencies
 RUN apt-get update \
   && apt-get -y install netcat gcc postgresql \

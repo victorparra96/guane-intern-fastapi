@@ -42,7 +42,7 @@ def test_create_user(
         "username": username
     }
 
-    response = client.post("/api/v1/users", json=data)
+    response = client.post("/api/users", json=data)
     assert response.status_code == 200, response.text
     data = response.json()
     assert data["username"] == username
