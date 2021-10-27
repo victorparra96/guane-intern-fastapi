@@ -17,8 +17,8 @@ def test_celery(word: str) -> str:
 
 
 @celery_app.task(acks_late=True)
-def send_photo() -> str:
+def send_photo(file: str) -> str:
     sleep(4)
-    files = {'file': open('resources/python.png', 'rb')}
+    files = {'file': open('resources/{}'.format(file), 'rb')}
     resp = requests.post('https://gttb.guane.dev/api/files', files=files)
     return f"test task return {resp}"
